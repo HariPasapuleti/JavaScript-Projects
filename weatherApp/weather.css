@@ -1,0 +1,108 @@
+/* Reset some default styles */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e9ecef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container for form and card */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styling the form */
+.weatherForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cityInput {
+    padding: 12px;
+    width: 280px;
+    border: 2px solid #007BFF;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    transition: border-color 0.3s ease;
+}
+
+.cityInput:focus {
+    border-color: #0056b3;
+    outline: none;
+}
+
+/* Styling the submit button */
+.weatherForm button {
+    padding: 12px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.weatherForm button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Styling the card */
+.card {
+    display: none; /* Initially hidden */
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Align text to the left for better organization */
+    margin-top: 20px;
+    width: 280px; /* Fixed width to match input */
+}
+
+.card h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #333;
+}
+
+.card p {
+    margin: 5px 0;
+    font-size: 1.3em;
+    color: #555;
+}
+
+/* Styling error messages */
+.errorDisplay {
+    color: #dc3545; /* Bootstrap danger color */
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 600px) {
+    .cityInput, .weatherForm button {
+        width: 90%; /* Full width on smaller screens */
+    }
+
+    .card h1 {
+        font-size: 2em; /* Adjust title size for smaller screens */
+    }
+
+    .card p {
+        font-size: 1.1em; /* Adjust paragraph size for smaller screens */
+    }
+}

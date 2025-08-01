@@ -1,0 +1,85 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+}
+
+/* Title */
+h1 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Button Section */
+.chances {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.chances button {
+    font-size: 3rem;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.chances button:hover {
+    transform: scale(1.1);
+    background-color: #e0e0e0;
+}
+
+/* Displays */
+#playerDisplay, #computerDisplay, #resultDisplay, #scoreDisplay {
+    font-size: 1.5rem;
+    color: #444;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    width: 80%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Score Display */
+#scoreDisplay {
+    font-weight: bold;
+    color: #222;
+    margin-top: 20px;
+    font-size: 1.75rem;
+}
+
+/* Result Highlight */
+#resultDisplay {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #555;
+}
+
+#resultDisplay.win {
+    color: #28a745;
+}
+
+#resultDisplay.lose {
+    color: #dc3545;
+}
+
+#resultDisplay.tie {
+    color: #ffc107;
+}
